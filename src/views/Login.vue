@@ -26,32 +26,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { GoogleOutlined, AppleOutlined } from '@ant-design/icons-vue';
 import { reactive } from 'vue';
 
-export default {
-  name: 'LoginPage',
-  components: {
-    GoogleOutlined,
-    AppleOutlined
-  },
-  setup() {
-    const formState = reactive({
-      email: '',
-      password: ''
-    });
+const formState = reactive({
+  email: '',
+  password: ''
+});
 
-    const onFinish = values => {
-      console.log('Success:', values);
-    };
-
-    return {
-      formState,
-      onFinish
-    };
-  }
-}
+const onFinish = values => {
+  console.log('Success:', values);
+};
 </script>
 
 <style scoped>
